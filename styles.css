@@ -360,6 +360,15 @@ section {
   box-shadow: 0 14px 34px rgba(23, 33, 43, 0.08);
 }
 
+.course-card {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(23, 33, 43, 0.13);
+}
+
 .course-card img {
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -375,6 +384,153 @@ section {
 .profile-card p {
   color: var(--muted);
   margin: 0;
+}
+
+.page-hero,
+.course-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(30px, 6vw, 72px);
+  align-items: center;
+  background: var(--bg);
+}
+
+.page-hero {
+  min-height: 420px;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(5, 42, 26, 0.92), rgba(8, 62, 41, 0.62)),
+    url("https://yesinstitutebd.com/wp-content/uploads/2025/01/Tag-1.png") center / cover;
+}
+
+.page-hero > div {
+  width: min(780px, 100%);
+}
+
+.page-hero .eyebrow,
+.course-hero .eyebrow {
+  color: var(--lime);
+}
+
+.page-hero p,
+.course-hero p {
+  max-width: 680px;
+  font-size: 18px;
+}
+
+.course-hero img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.course-hero h1,
+.page-hero h1 {
+  font-size: clamp(38px, 5vw, 62px);
+}
+
+.course-hero {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+}
+
+.detail-layout {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+.detail-main,
+.detail-card,
+.admission-form {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(23, 33, 43, 0.08);
+}
+
+.detail-main {
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.detail-main p,
+.detail-card p {
+  color: var(--muted);
+}
+
+.detail-card {
+  position: sticky;
+  top: 126px;
+  padding: 26px;
+}
+
+.detail-card .button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.form-section {
+  background: var(--white);
+}
+
+.admission-form {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admission-form label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 13px 14px;
+  color: var(--ink);
+  font: inherit;
+  background: var(--white);
+}
+
+.admission-form input:focus,
+.admission-form select:focus,
+.admission-form textarea:focus {
+  outline: 3px solid rgba(13, 122, 62, 0.14);
+  border-color: var(--green);
+}
+
+.success-message {
+  display: none;
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-radius: 6px;
+  background: #eaf7ee;
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.success-message.is-visible {
+  display: block;
 }
 
 .admit-banner {
@@ -627,8 +783,15 @@ section {
   .split-section,
   .internship,
   .events-section,
+  .page-hero,
+  .course-hero,
+  .detail-layout,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .detail-card {
+    position: static;
   }
 
   .photo-grid {
@@ -676,7 +839,8 @@ section {
   .stats,
   .card-grid.three,
   .card-grid.two,
-  .story-row {
+  .story-row,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 

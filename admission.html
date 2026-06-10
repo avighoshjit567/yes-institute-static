@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admission Form | YES Tourism & Hotel Management Institute</title>
+  <link rel="preconnect" href="https://yesinstitutebd.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-strip">
+      <span>Zebun-Paradise 5th Floor, Dhanmondi, Dhaka</span>
+      <span>+8801613594144 | yesinstitutebd@gmail.com</span>
+    </div>
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="https://yesinstitutebd.com/wp-content/uploads/2025/01/logo-1-2-1.png" alt="YES Institute logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu</button>
+      <div class="nav-links">
+        <a href="index.html#about">About YES!</a>
+        <a href="index.html#academic">Academic</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#events">Events</a>
+        <a href="index.html#contact">Contact Us</a>
+      </div>
+      <a class="nav-cta" href="admission.html">Admission form</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero admission-hero">
+      <div>
+        <p class="eyebrow">Admission</p>
+        <h1>Start your YES Institute admission</h1>
+        <p>Share your details and preferred course. This static demo shows a confirmation message only and does not save form data.</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <form class="admission-form" id="admissionForm">
+        <div class="form-grid">
+          <label>
+            Full name
+            <input name="name" type="text" placeholder="Your full name" required>
+          </label>
+          <label>
+            Phone number
+            <input name="phone" type="tel" placeholder="+880..." required>
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" placeholder="you@example.com">
+          </label>
+          <label>
+            Preferred course
+            <select name="course" required>
+              <option value="">Select a course</option>
+              <option>Diploma in Hotel Management</option>
+              <option>Certificate Program in F & B Production 1 Year</option>
+              <option>Certificate Program in F & B Production 6 Months</option>
+            </select>
+          </label>
+          <label>
+            Education level
+            <input name="education" type="text" placeholder="SSC, HSC, Diploma, Bachelor...">
+          </label>
+          <label>
+            Preferred batch
+            <select name="batch">
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+              <option>Weekend</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Write any question or note"></textarea>
+        </label>
+        <button class="button primary" type="submit">Submit admission form</button>
+        <p class="success-message" id="successMessage" role="status" aria-live="polite">Thanks, we will contact with you.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="https://yesinstitutebd.com/wp-content/uploads/2025/01/logo-1-2-1.png" alt="YES Institute logo">
+        <p>YES Tourism & Hotel Management Institute is an accredited private organization located at Dhanmondi, Dhaka-Bangladesh.</p>
+      </div>
+      <div>
+        <h3>Courses</h3>
+        <a href="diploma-in-hotel-management.html">Diploma in Hotel Management</a>
+        <a href="certificate-fb-production-1-year.html">F & B Production 1 Year</a>
+        <a href="certificate-fb-production-6-months.html">F & B Production 6 Months</a>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#academic">Academic</a>
+        <a href="index.html#events">Upcoming Events</a>
+      </div>
+      <div>
+        <h3>Contact with us</h3>
+        <p>Zebun-Paradise 5th Floor, House #4, Road #27 Old, 16 New, Dhanmondi, Dhaka - 1209.</p>
+        <p>Phone: +8801613594144</p>
+        <p>Email: yesinstitutebd@gmail.com</p>
+      </div>
+    </div>
+    <div class="copyright">Copyright 2025 YES Tourism & Hotel Management Institute.</div>
+  </footer>
+
+  <script>
+    const button = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+    button.addEventListener('click', () => links.classList.toggle('is-open'));
+
+    const form = document.querySelector('#admissionForm');
+    const successMessage = document.querySelector('#successMessage');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      form.reset();
+      successMessage.classList.add('is-visible');
+    });
+  </script>
+</body>
+</html>
