@@ -64,8 +64,10 @@ a {
 }
 
 .brand img {
-  width: 220px;
-  height: auto;
+  width: auto;
+  height: 74px;
+  max-width: 170px;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -819,7 +821,10 @@ section {
 }
 
 .footer-logo {
-  width: 220px;
+  width: auto;
+  height: 96px;
+  max-width: 180px;
+  object-fit: contain;
   margin-bottom: 16px;
 }
 
@@ -924,7 +929,8 @@ section {
   }
 
   .brand img {
-    width: 180px;
+    height: 62px;
+    max-width: 142px;
   }
 
   .nav-cta {
