@@ -64,7 +64,7 @@ a {
 }
 
 .brand img {
-  width: auto;
+  width: 105px;
   height: 74px;
   max-width: 170px;
   object-fit: contain;
