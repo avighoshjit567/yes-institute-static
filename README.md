@@ -1,6 +1,6 @@
-# YES Institute Static Showcase
+# Dhaka Institute of Hospitality and Tourism Static Showcase
 
-Temporary static showcase website based on the YES Tourism & Hotel Management Institute demo site.
+Temporary static showcase website based on the Dhaka Institute of Hospitality and Tourism demo site.
 
 ## Preview locally
 
