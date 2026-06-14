@@ -925,16 +925,27 @@ section {
 
 @media (max-width: 640px) {
   .nav {
+    min-height: 0;
     gap: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .brand img {
-    height: 62px;
-    max-width: 142px;
+    width: 76px;
+    height: 58px;
+    max-width: 76px;
+  }
+
+  .menu-toggle {
+    min-height: 38px;
+    padding: 8px 12px;
   }
 
   .nav-cta {
     width: 100%;
+    min-height: 40px;
+    padding: 10px 16px;
   }
 
   .hero {
